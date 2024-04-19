@@ -21,10 +21,12 @@ def led(fingerUp):
         servo.write(90)  # Rotate the servo motor to 180 degrees
         time.sleep(10)
         servo.write(0) 
+        print("Door opened")
     elif fingerUp == [0, 1, 0, 0, 0]:
         led_1.write(0)
         led_2.write(0)
         servo.write(0)
+        print("Door closed")
     else:
         beep.write(1)  # Turn on the beep sound
         time.sleep(0.5)  # Beep duration
